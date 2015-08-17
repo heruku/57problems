@@ -4,7 +4,7 @@ defmodule Problem1 do
   end
 
   def name do
-    IO.gets("")
+    IO.gets("Please enter your name: ") |> String.strip
   end
 
   def greeting(name) do

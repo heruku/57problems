@@ -3,6 +3,7 @@ defmodule Problem1Test do
   import ExUnit.CaptureIO
 
   test "greets the user" do
-    assert capture_io("Uku", fn -> Problem1.greet end) == "Hello, Uku!\n"
+    output = capture_io("Uku\n", fn -> Problem1.greet end)
+    assert String.contains?(output, "Hello, Uku!\n")
   end
 end
